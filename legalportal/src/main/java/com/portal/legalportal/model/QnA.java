@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 public class QnA {
 	@Id
 	private int id;
-	private String question;
-	private List<Answer> answer; 
+	private String qna_question;
+	//private List<Answer> qna_answer; 
 	private int rating;
 	private boolean isResolved;
 	public int getId() {
@@ -19,18 +19,19 @@ public class QnA {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getQuestion() {
-		return question;
+	
+	public String getQna_question() {
+		return qna_question;
 	}
-	public void setQuestion(String question) {
-		this.question = question;
+	public void setQna_question(String qna_question) {
+		this.qna_question = qna_question;
 	}
-	public List<Answer> getAnswer() {
-		return answer;
-	}
-	public void setAnswer(List<Answer> answer) {
-		this.answer = answer;
-	}
+//	public List<Answer> getQna_answer() {
+//		return qna_answer;
+//	}
+//	public void setQna_answer(List<Answer> qna_answer) {
+//		this.qna_answer = qna_answer;
+//	}
 	public int getRating() {
 		return rating;
 	}
@@ -43,11 +44,11 @@ public class QnA {
 	public void setResolved(boolean isResolved) {
 		this.isResolved = isResolved;
 	}
-	public QnA(int id, String question, List<Answer> answer, int rating, boolean isResolved) {
+	public QnA(int id, String qna_question, int rating, boolean isResolved) {
 		super();
 		this.id = id;
-		this.question = question;
-		this.answer = answer;
+		this.qna_question = qna_question;
+		//this.qna_answer = qna_answer;
 		this.rating = rating;
 		this.isResolved = isResolved;
 	}
